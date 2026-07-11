@@ -25,7 +25,7 @@ test('Should be able to add a new todo', async ({ page, request, context }) => {
 
   const todopage1=new TodoPage(page);
    await todopage1.Load();
-  todopage1.getDeleteButton(0);
+ await todopage1.getDeleteButton(0);
   const noTodoMessage=todopage1.gettodomessage();
   await expect (noTodoMessage).toBeVisible();
 
